@@ -14,7 +14,7 @@ export class Email {
 			return false
 		}
 
-		if (domain.length > 255) {
+		if (!domain.length || domain.length > 255) {
 			return false
 		}
 
