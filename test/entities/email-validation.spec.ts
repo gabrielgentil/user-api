@@ -31,13 +31,13 @@ describe('Email validation', () => {
 		expect(Email.validate(email)).toBeFalsy()
 	})
 
-	test('should not accept local part empty', async () => {
-		const email = '' + '@email.com'
+	test('should not accept empty local part', async () => {
+		const email = '@email.com'
 		expect(Email.validate(email)).toBeFalsy()
 	})
 
-	test('should not accept domain part empty', async () => {
-		const email = 'l' + '@' + ''
+	test('should not accept domain empty', async () => {
+		const email = 'any@'
 		expect(Email.validate(email)).toBeFalsy()
 	})
 
