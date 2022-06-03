@@ -45,4 +45,19 @@ describe('Email validation', () => {
 		const email = 'any@' + 'd'.repeat(64) + '.com'
 		expect(Email.validate(email)).toBeFalsy()
 	})
+
+	test('should not accept local part with invalid char', async () => {
+		const email = 'any email@email.com'
+		expect(Email.validate(email)).toBeFalsy()
+	})
+
+	test('should not accept local part with ending dot', async () => {
+		const email = 'any.@email.com'
+		expect(Email.validate(email)).toBeFalsy()
+	})
+
+	test('should not accept email without an at-sign', async () => {
+		const email = 'anyemail.com'
+		expect(Email.validate(email)).toBeFalsy()
+	})
 })
