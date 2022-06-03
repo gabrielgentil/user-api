@@ -10,11 +10,7 @@ export class Email {
 
 		const [local, domain] = email.split('@')
 
-		if (!local.length) {
-			return false
-		}
-
-		if (local.length > 64) {
+		if (!local.length || local.length > 64) {
 			return false
 		}
 
