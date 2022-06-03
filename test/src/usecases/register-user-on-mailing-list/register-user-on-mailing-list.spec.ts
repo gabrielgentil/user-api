@@ -1,10 +1,8 @@
-import { UserData } from '../../../../src/usecases/register-user-on-mailing-list/user-data'
+// import { UserData } from '../../../../src/usecases/register-user-on-mailing-list/user-data'
 
 describe('Register user on mailing list use case', () => {
 	test('should add user with complete data to mailing list', async () => {
-		const users: UserData[] = []
-
-		console.log(users)
+		// const users: UserData[] = []
 
 		// const repo: UserRepository = new InMemoryUserRepository(users)
 		// const usecase: RegisterUserOnMailingList: new RegisterUserOnMailingList(repo)
