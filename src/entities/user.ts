@@ -1,7 +1,6 @@
-import { Either, left, right } from '../shared/either'
+import { Either, left, right } from '../shared'
 import { Email } from './email'
-import { InvalidEmailError } from './errors/invalid-email'
-import { InvalidNameError } from './errors/invalid-name'
+import { InvalidEmailError, InvalidNameError } from './errors'
 import { Name } from './name'
 import { UserData } from './user-data'
 
